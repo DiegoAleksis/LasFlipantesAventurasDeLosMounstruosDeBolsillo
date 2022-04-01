@@ -1,28 +1,54 @@
 import java.util.ArrayList;
 
 public class Objeto {
-    //Atributos
-    //nombre- String
-    //objetos disponibles-ArrayList<Objetos>
+    /* costo-doble
+    cantidad-entero
+    nombre-String
 
+
+     */
+
+    private double costo;
+    private int cantidad;
     private String nombre;
-    private ArrayList<Objeto>objetosDisponibles;
+    private String tipo;
 
-
-
-
-    //metodo
-
-    public void comprar(double dinero, int cantidad, Objeto objeto ){
-        //validar que hay sufucientes objetos del tipo requerido (¿?)
-        //cantidad y objeto
-            //Si si tengo, validar que el dinero sea suficiente
-        //Sino
-            //
+    public double getCosto() {
+        return costo;
     }
-    //comprar
-    //vender
 
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
 
+    public int getCantidad() {
+        return cantidad;
+    }
 
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public Objeto(double costo, int cantidad, String nombre, String tipo) {
+        this.costo = costo;
+        this.cantidad = cantidad;
+        this.nombre = nombre;
+        this.tipo = tipo;
+    }
 }
