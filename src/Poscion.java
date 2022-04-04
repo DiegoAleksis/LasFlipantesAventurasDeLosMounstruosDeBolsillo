@@ -9,6 +9,5 @@ public class Poscion extends Objeto{
                     aumentar 20 de ataque
                     si es velocidad
                         aumentar 20 velocidad
-
-     */
+                        */
 }
