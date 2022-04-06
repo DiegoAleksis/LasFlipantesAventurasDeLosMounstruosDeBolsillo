@@ -10,11 +10,11 @@ public class Pokemon extends Personaje{
 
 
     //pelea
-        //consumi pocion o baya para ataque?
+        //consumir pocion o baya para ataque?
         //ataque base de habilidad +20
-        //si mi pokemon es fuerteVs el pkemon opuesto
+        //si mi pokemon es fuerteVs el pokemon opuesto
             //+ataque de habilidad
-        //sino si mi pokwmon es debilVs el pokemon opuesto
+        //sino si mi pokemon es debilVs el pokemon opuesto
             //-ataque de habilidad
         //sino
             //normal ataque
