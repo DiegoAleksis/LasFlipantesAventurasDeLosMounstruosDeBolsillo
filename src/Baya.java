@@ -9,4 +9,33 @@ public class Baya extends Objeto {
                     si es velocidad
                         aumentar 20 velocidad
                         */
+
+    private String efecto;
+    private int duaracion;
+
+    public Baya(double costo, int cantidad, String nombre, String tipo) {
+        super(costo, cantidad, nombre, tipo);
+    }
+
+    public Baya(double costo, int cantidad, String nombre, String tipo, String efecto, int duaracion) {
+        super(costo, cantidad, nombre, tipo);
+        this.efecto = efecto;
+        this.duaracion = duaracion;
+    }
+
+    public String getEfecto() {
+        return efecto;
+    }
+
+    public void setEfecto(String efecto) {
+        this.efecto = efecto;
+    }
+
+    public int getDuaracion() {
+        return duaracion;
+    }
+
+    public void setDuaracion(int duaracion) {
+        this.duaracion = duaracion;
+    }
 }
