@@ -14,11 +14,22 @@ public class Tienda {
 
     public boolean comprar(double dinero, int cantidad, Objeto objeto, int indiceObjeto) {
         if (indiceObjeto>objetosDisponibles.size()){
-            System.out.println("Error, no existe ese objeto");
+            System.out.println("Error, no existe ese objeto 🙁");
+            return false;
         }else{
             if (objetosDisponibles.get(indiceObjeto).cantidad >=cantidad){
-
-        }
+            double precioTotal= cantidad*objetosDisponibles.get(indiceObjeto).costo;
+            if (precioTotal>=dinero){
+                System.out.println("¡VENDIDO!🤩🛍️");
+                return true;
+            }else{
+                System.out.println("Lo siento, no le alcanza, le hace falta: 💵" + (precioTotal-dinero));
+                return false;
+            }
+        }else{
+                System.out.println("No tenemos la cantidad solicitada😔");
+                return false;
+            }
 
         }
         //validar que hay sufucientes objetos del tipo requerido (¿?)
@@ -27,8 +38,6 @@ public class Tienda {
         //Sino
         //
 
-
-        return false;
     }
 
     //comprar
