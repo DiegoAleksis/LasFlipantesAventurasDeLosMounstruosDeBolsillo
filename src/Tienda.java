@@ -19,6 +19,16 @@ public class Tienda {
         //Sino
         //
 
+
+        System.out.println("Los objetos disponibles son: ");
+        int indice=1;
+        for (Objeto x :objetosDisponibles) {
+            System.out.print(indice + " - " );
+            System.out.println(x);
+            indice++;
+        }
+
+
         return false;
     }
 
