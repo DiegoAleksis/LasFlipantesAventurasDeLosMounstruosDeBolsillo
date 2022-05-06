@@ -12,7 +12,7 @@ public class Tienda {
 
     //metodo
 
-    public boolean comprar(double dinero, int cantidad, Objeto objeto, int indiceObjeto) {
+    public boolean comprar(double dinero, int cantidad, int objeto, int indiceObjeto) {
         if (indiceObjeto>objetosDisponibles.size()){
             System.out.println("Error, no existe ese objeto 🙁");
             return false;
@@ -43,6 +43,7 @@ public class Tienda {
     //comprar
     //vender
     public boolean UsuarioVender(double dinero, int cantidad, Objeto objeto) {
+        objeto.getClass();
 
 
         return false;
