@@ -12,7 +12,15 @@ public class Tienda {
 
     //metodo
 
-    public boolean comprar(double dinero, int cantidad, Objeto objeto) {
+    public boolean comprar(double dinero, int cantidad, Objeto objeto, int indiceObjeto) {
+        if (indiceObjeto>objetosDisponibles.size()){
+            System.out.println("Error, no existe ese objeto");
+        }else{
+            if (objetosDisponibles.get(indiceObjeto).cantidad >=cantidad){
+
+        }
+
+        }
         //validar que hay sufucientes objetos del tipo requerido (¿?)
         //cantidad y objeto
         //Si si tengo, validar que el dinero sea suficiente
