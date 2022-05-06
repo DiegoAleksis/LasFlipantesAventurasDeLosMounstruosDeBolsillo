@@ -20,15 +20,6 @@ public class Tienda {
         //
 
 
-        System.out.println("Los objetos disponibles son: ");
-        int indice=1;
-        for (Objeto x :objetosDisponibles) {
-            System.out.print(indice + " - " );
-            System.out.println(x);
-            indice++;
-        }
-
-
         return false;
     }
 
@@ -59,6 +50,18 @@ public class Tienda {
     public Tienda(String nombre, ArrayList<Objeto> objetosDisponibles) {
         this.nombre = nombre;
         this.objetosDisponibles = objetosDisponibles;
+    }
+
+
+    public void mostrarDisponibles() {
+        System.out.println("Los objetos disponibles son: ");
+        int indice = 1;
+        for (Objeto x : objetosDisponibles) {
+            System.out.print(indice + " - ");
+            System.out.println(x);
+            indice++;
+
+        }
     }
 }
 
