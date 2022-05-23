@@ -9,7 +9,14 @@ public class Pokebola extends Objeto{
         this.efectividad = efectividad;
     }
 
-    //atrapar retorna true/false
+    public double getEfectividad() {
+        return efectividad;
+    }
+
+    public void setEfectividad(double efectividad) {
+        this.efectividad = efectividad;
+    }
+//atrapar retorna true/false
     //tipo de pokebola
         // siEs legendario -40 de efectividad
             //hacemos un random del 1 al 100,
