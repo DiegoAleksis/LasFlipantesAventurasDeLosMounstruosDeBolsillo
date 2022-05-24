@@ -45,10 +45,23 @@ public class Objeto {
         this.tipo = tipo;
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().toString().substring(5)+
+                "costo=" + costo +
+                ", cantidad=" + cantidad +
+                ", nombre='" + nombre + '\'' +
+                ", tipo='" + tipo + '\'' +
+                '}';
+    }
+
     public Objeto(double costo, int cantidad, String nombre, String tipo) {
         this.costo = costo;
         this.cantidad = cantidad;
         this.nombre = nombre;
         this.tipo = tipo;
+
+
+
+        }
     }
-}

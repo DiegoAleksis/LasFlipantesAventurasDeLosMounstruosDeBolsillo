@@ -19,7 +19,7 @@ public class Tienda {
         }else{
             if (objetosDisponibles.get(indiceObjeto).cantidad >=cantidad){
             double precioTotal= cantidad*objetosDisponibles.get(indiceObjeto).costo;
-            if (precioTotal>=dinero){
+            if (dinero>=precioTotal){
                 System.out.println("¡VENDIDO!🤩🛍️");
                 return true;
             }else{
