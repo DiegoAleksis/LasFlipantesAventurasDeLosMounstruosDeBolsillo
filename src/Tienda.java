@@ -45,6 +45,8 @@ public class Tienda {
     public boolean UsuarioVender(double dinero, int cantidad, Objeto objeto) {
         objeto.getClass();
 
+        if (objeto.getClass().equals(Baya.class))
+
 
         return false;
     }
