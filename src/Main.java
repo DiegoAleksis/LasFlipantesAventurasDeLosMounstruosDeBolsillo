@@ -8,6 +8,17 @@ public  class Main implements UtilInterface{
     static ArrayList<String> tiposPokemon;
 
     public static void main(String[] args) throws InterruptedException {
+
+        habilidads.add(habilidad);
+        habilidads.add(habilidad2);
+        habilidads.add(habilidad3);
+
+
+
+
+
+
+
         long tiempoInicial=System.currentTimeMillis();
        Thread.sleep(20000);
        long fin=System.currentTimeMillis();
