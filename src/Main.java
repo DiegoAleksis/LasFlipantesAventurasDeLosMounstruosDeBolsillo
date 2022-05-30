@@ -57,6 +57,13 @@ public  class Main implements UtilInterface{
 
     @Override
     public String[] debilyfuerteAleatorio(String tipo) {
+
+
+
+
+
+
+
         return new String[0];
     }
 
