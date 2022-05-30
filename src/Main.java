@@ -58,13 +58,28 @@ public  class Main implements UtilInterface{
     @Override
     public String[] debilyfuerteAleatorio(String tipo) {
 
+        String[]Caja=new String[2];
+        switch (tipo){
+            case "agua":
+                Caja[0]="electrico";
+                Caja[1]="fuego";
+                break;
+            case "fuego":
+                Caja[0]="agua";
+                Caja[1]="electrico";
+                break;
+            default:
+                Caja[0]="fuego";
+                Caja[1]="agua";
+                break;
+
+        }
 
 
 
 
 
-
-        return new String[0];
+        return Caja;
     }
 
     @Override
