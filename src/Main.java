@@ -33,7 +33,7 @@ public  class Main implements UtilInterface{
 
     @Override
     public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
-        double tiempoPresente=(double) ((fin-tiempoInicial)/1000);
+        double tiempoPresente=(double) ((tiempoFinal-tiempoInicial)/1000);
         System.out.println(tiempoPresente +" segundos");
     }
 
