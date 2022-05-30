@@ -14,11 +14,6 @@ public  class Main implements UtilInterface{
         habilidads.add(habilidad3);
 
 
-        System.out.println("EXPLORAR");
-        System.out.println("Entar a tienda");
-        System.out.println("Tirar objeto");
-        System.out.println("Ver estadisticas");
-        System.out.println("Tiempo jugado");
 
 
 
@@ -26,22 +21,29 @@ public  class Main implements UtilInterface{
 
 
 
-        long tiempoInicial=System.currentTimeMillis();
-       Thread.sleep(20000);
-       long fin=System.currentTimeMillis();
-       double tiempoPresente=(double) ((fin-tiempoInicial)/1000);
-        System.out.println(tiempoPresente +" segundos");
+
+      // long tiempoInicial=System.currentTimeMillis();
+       //Thread.sleep(20000);
+       //long fin=System.currentTimeMillis();
+       //double tiempoPresente=(double) ((fin-tiempoInicial)/1000);
+        //System.out.println(tiempoPresente +" segundos");
 
 
     }
 
     @Override
     public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
-
+        double tiempoPresente=(double) ((fin-tiempoInicial)/1000);
+        System.out.println(tiempoPresente +" segundos");
     }
 
     @Override
     public void mostrarMenu() {
+        System.out.println("EXPLORAR");
+        System.out.println("Entar a tienda");
+        System.out.println("Tirar objeto");
+        System.out.println("Ver estadisticas");
+        System.out.println("Tiempo jugado");
 
     }
 
