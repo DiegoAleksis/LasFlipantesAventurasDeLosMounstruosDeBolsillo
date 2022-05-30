@@ -14,6 +14,13 @@ public  class Main implements UtilInterface{
         habilidads.add(habilidad3);
 
 
+        System.out.println("EXPLORAR");
+        System.out.println("Entar a tienda");
+        System.out.println("Tirar objeto");
+        System.out.println("Ver estadisticas");
+        System.out.println("Tiempo jugado");
+
+
 
 
 
@@ -55,7 +62,17 @@ public  class Main implements UtilInterface{
 
     @Override
     public String[] nombresAleatorios(String tipo) {
+        String agua[]= new ArrayList;
+        String fuego[]=new ArrayList;
+        String electrico=new ArrayList;
+
+
         return new String[0];
     }
+
+
+
 }
+
+
 
