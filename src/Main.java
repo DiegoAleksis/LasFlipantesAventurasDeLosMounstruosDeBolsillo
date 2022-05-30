@@ -62,12 +62,16 @@ public  class Main implements UtilInterface{
 
     @Override
     public String[] nombresAleatorios(String tipo) {
-        String agua[]= new ArrayList;
-        String fuego[]=new ArrayList;
-        String electrico=new ArrayList;
-
-
-        return new String[0];
+        String agua[]= {"squirtle","psyduck","poolwag"};
+        String fuego[]={"charizard","charmander","cyndaquil"};
+        String electrico[]={"pikachu", "raychu", "aska"};
+        if (tipo.equals("agua")){
+            return agua;
+        }else if(tipo.equals("fuego")){
+            return fuego;
+        }else{
+            return electrico;
+        }
     }
 
 
