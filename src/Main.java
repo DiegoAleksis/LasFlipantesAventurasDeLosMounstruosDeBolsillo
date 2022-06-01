@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public  class Main implements UtilInterface{
     static ArrayList<Habilidad> habilidads=new ArrayList<>();
@@ -54,7 +55,9 @@ public  class Main implements UtilInterface{
 
     @Override
     public <T> T sacarAleatorio(ArrayList<T> arrayList) {
-        return null;
+        Random random=new Random();
+        int indice=random.nextInt(0, arrayList.size()-1);
+        return arrayList.get(indice);
     }
 
     @Override
