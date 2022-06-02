@@ -50,7 +50,20 @@ public  class Main implements UtilInterface{
 
     @Override
     public Pokemon crearPokemonAleatorio() {
-        return null;
+       Random random=new Random();
+       String tipo= sacarAleatorio(tiposPokemon);
+       int tamNombre=nombresAleatorios(tipo).length;
+       int nombre=random.nextInt(0,tamNombre);
+       String nombreFinal=nombresAleatorios(tipo)[nombre];
+       int hp= random.nextInt(50,200);
+       boolean legendario=random.nextBoolean();
+       String[] debilFuerte=debilyfuerteAleatorio(tipo);
+       int fuerza=random.nextInt(50,200);
+       int velocidad=random.nextInt(1,10);
+       int nivel=random.nextInt(1,15);
+       char genero= random.nextInt(0,10)<5? 'f':'m';
+
+       return new Pokemon(nombreFinal,nivel,genero,tipo,sacarAleatorio(habilidads),hp,legendario,debilFuerte[0],debilFuerte[1],fuerza,velocidad );
     }
 
     @Override
