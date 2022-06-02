@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public  class Main implements UtilInterface{
     static ArrayList<Habilidad> habilidads=new ArrayList<>();
@@ -8,11 +9,27 @@ public  class Main implements UtilInterface{
     static Habilidad habilidad3=new Habilidad("Puño de fuego","Puño que quema en gran porcion a su oponente", 60);
     static ArrayList<String> tiposPokemon;
 
+
+
+
+
+
+
     public static void main(String[] args) throws InterruptedException {
 
         habilidads.add(habilidad);
         habilidads.add(habilidad2);
         habilidads.add(habilidad3);
+        Thread.sleep(1500);
+        Main objetoMain=new Main();
+        objetoMain.tiempoJugado(tiempoInicial,System.currentTimel);
+
+        int respuesta=1;
+        Scanner scanner=new Scanner(System.in);
+        while (respuesta!=0){
+            objetoMain.mostrarMenu();
+        }
+
 
 
 
