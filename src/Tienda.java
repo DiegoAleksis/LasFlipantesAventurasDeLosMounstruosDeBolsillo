@@ -13,10 +13,10 @@ public class Tienda {
     //metodo
 
     public boolean comprar(double dinero, int cantidad, int objeto, int indiceObjeto) {
-        if (indiceObjeto > objetosDisponibles.size()) {
-            System.out.println("Error, no existe ese objeto 🙁");
-            return false;
-        } else {
+        
+        try {
+
+
             if (objetosDisponibles.get(indiceObjeto).cantidad >= cantidad) {
                 double precioTotal = cantidad * objetosDisponibles.get(indiceObjeto).costo;
                 if (dinero >= precioTotal) {
@@ -29,8 +29,12 @@ public class Tienda {
             } else {
                 System.out.println("No tenemos la cantidad solicitada😔");
                 return false;
-            }
 
+
+            }
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("ese objeto no existe");
+            return false;
         }
         //validar que hay sufucientes objetos del tipo requerido (¿?)
         //cantidad y objeto
@@ -85,6 +89,9 @@ public class Tienda {
 
             }
         }
+
+    public void comprar(int i, int i1, int i2) {
     }
+}
 
 

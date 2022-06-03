@@ -16,25 +16,31 @@ public  class Main implements UtilInterface{
 
 
     public static void main(String[] args) throws InterruptedException {
+        long tiempoInicial = System.currentTimeMillis();
 
         habilidads.add(habilidad);
         habilidads.add(habilidad2);
         habilidads.add(habilidad3);
         Thread.sleep(1500);
         Main objetoMain=new Main();
-        objetoMain.tiempoJugado(tiempoInicial,System.currentTimel);
+        objetoMain.tiempoJugado(tiempoInicial,System.currentTimeMillis());
+
+
+        Poscion poscion=new Poscion(30, 2, "poscion vida", "curar");
+        ArrayList<Objeto>objetos=new ArrayList<>();
+        objetos.add(poscion);
+        Tienda tienda=new Tienda("Mi tienda",objetos);
+        tienda.comprar(30,1,8);
+
+
+
+
 
         int respuesta=1;
         Scanner scanner=new Scanner(System.in);
         while (respuesta!=0){
             objetoMain.mostrarMenu();
         }
-
-
-
-
-
-
 
 
 

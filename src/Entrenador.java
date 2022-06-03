@@ -75,6 +75,19 @@ private double dinero;
     }
 
 
+    public boolean tirarObjeto(int indice){
+        try {
+            mochila.remove(indice);
+            return false;
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Ese objeto no existe");
+            return false;
+        }
+    }
+
+
+
+
     //pelear(abstracto)
         //escogerPokemon del pokedex
             //llamar al metodo pelear del pokemon
