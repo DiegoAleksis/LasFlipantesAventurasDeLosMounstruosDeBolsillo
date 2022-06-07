@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Entrenador extends Personaje{
     //region-String
@@ -87,7 +88,61 @@ private double dinero;
 
 
 
+@Override
+    public boolean pelear(Pokemon PokemonVs){
+        ArrayList<Pokemon>paraPelear= new ArrayList<>();
 
+    System.out.println("Escoge 3 pokemones");
+    mostrarPokedex(pokedex);
+    Scanner leer=new Scanner(System.in);
+    for (int i=0; i<3;i++){
+        System.out.println("Ingrese el pokemon");
+        try {
+            int indice= leer.nextInt();
+            paraPelear.add(pokedex.get(indice-1));
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Ese pokemon no existe, ingresa uno ya existente");
+            i--;
+        }
+    }
+    int respuesta=0;
+    do {
+        System.out.println("1 Pelear");
+        System.out.println("2 Usar Baya");
+        System.out.println("3 Huir");
+        respuesta= leer.nextInt();
+            if (paraPelear.size()!=0){
+                if (respuesta==1){
+                    System.out.println("Escoge el pokemon para pelear");
+                    mostrar.pokedex(paraPelear);
+                    int eleccion= leer.nextInt();
+                    if (!paraPelear.get(eleccion).pelear(pokemonMascota)) {
+                        paraPelear.remove(eleccion);
+                    }else {
+                        return true;
+                    }
+
+                }else if (respuesta==2){
+                    mostrarMochila();
+                    System.out.println("Escoge la baya o la pocion");
+                    int eleccion= leer.nextInt();
+                    System.out.println("Escoge el pokemon para usar");
+                    mostrarpokedex(paraPelear);
+                    getMochila().get(eleccion-1).usar(paraPelear.get(leer.nextInt()));
+
+                }else{
+                    System.out.println("Huyendo");
+                    return false;
+                }
+            }else{
+                return false;
+
+            }
+
+    }while (respuesta!=0);
+    return false;
+
+}
     //pelear(abstracto)
         //escogerPokemon del pokedex
             //llamar al metodo pelear del pokemon
